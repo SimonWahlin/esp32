@@ -17,15 +17,17 @@ private:
     static void toggleLED(void *parameter);
 public:
     const char* name;
-    StatusLedConfig *configuration;
+    StatusLedConfig configuration;
 
     StatusLed();
     StatusLed(const char* name);
-    StatusLed(const char* name, StatusLedConfig *configuration);
+    StatusLed(const char* name, StatusLedConfig configuration);
 
     void Start();
 
     void Stop();
 
     void Remove();
+
+    void PrintConfig();
 };
